@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Gold Star Gym Design System */
+    --background: 0 0% 6%;
+    --foreground: 51 100% 84%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 51 100% 84%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 51 100% 84%;
+
+    --primary: 51 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 51 100% 84%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 51 20% 65%;
+
+    --accent: 45 100% 65%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 51 100% 50%;
+
+    --radius: 0.5rem;
+
+    /* Gym-specific tokens */
+    --gold: 51 100% 50%;
+    --gold-bright: 51 100% 60%;
+    --gold-dark: 45 100% 35%;
+    --black-light: 0 0% 12%;
+    --black-medium: 0 0% 8%;
+    --black-deep: 0 0% 6%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-bright)));
+    --gradient-black: linear-gradient(180deg, hsl(var(--black-medium)), hsl(var(--black-deep)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--black-deep)) 0%, hsl(var(--gold)) 100%);
+
+    /* Shadows */
+    --shadow-gold: 0 0 30px hsl(var(--gold) / 0.3);
+    --shadow-gold-strong: 0 0 50px hsl(var(--gold) / 0.5);
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+}
